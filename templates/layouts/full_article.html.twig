@@ -1,0 +1,20 @@
+<div class="main-content container">
+    <article class="blog-article">
+        <h2 class="article-heading">{{ post.title }}</h2>
+        <div class="article-info justify-content-center d-flex">
+            <div class="date-container">
+                <i class="fa fa-calendar"></i>
+                <div class="date">{{ post.createdAt.date|date("m/d/Y") }}</div>
+            </div>
+        </div>
+        <p class="text-justify article-paragraph">{{ post.content }}</p>
+        {%  if not post.tags.empty %}
+            <div class="article-tags full-article-tags">
+                <i class="fa fa-tags"></i>
+                {% for tag in post.tags %}
+                    <a href="{{ path('blog_index',{'tag':tag.name == app.request.query.get('tag') ? null : tag.name}) }}" class="tag-link">#{{ tag.name }}</a>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </article>
+</div>

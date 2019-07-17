@@ -1,0 +1,24 @@
+$white: #ffffff;
+$fontColor: #333333;
+$lightgrey: #f4f4f4;
+$grey: #595959;
+$font: 'Raleway', sans-serif;
+
+@mixin boxShadow($property) {
+  -webkit-box-shadow: $property;
+  -moz-box-shadow: $property;
+  box-shadow: $property;
+}
+@font-face {
+  font-family: Ashby;
+  src: url("../assets/ASHBL___.ttf");
+}
+@font-face {
+  font-family: Ashby;
+  src: url("../assets/ASHBB___.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: Digital;
+  src: url("../assets/Digitalt.ttf");
+}

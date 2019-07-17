@@ -1,0 +1,7 @@
+{% extends 'base.html.twig' %}
+{% set title = "Mateusz Weszka Blog" %}
+
+{% block body %}
+    {% include('layouts/full_article.html.twig') %}
+    {% include('layouts/disqus.html.twig') %}
+{% endblock %}
